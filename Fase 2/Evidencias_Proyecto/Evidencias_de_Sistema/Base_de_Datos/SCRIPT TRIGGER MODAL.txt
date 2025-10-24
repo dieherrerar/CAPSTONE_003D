@@ -1,0 +1,9 @@
+3️⃣ TRIGGER → tg_procesar_dato_dispositivo
+
+Activa automáticamente la función cada vez que se inserta un nuevo dato.
+DROP TRIGGER IF EXISTS tg_procesar_dato_dispositivo ON public.datos_dispositivo;
+
+CREATE TRIGGER tg_procesar_dato_dispositivo
+AFTER INSERT ON public.datos_dispositivo
+FOR EACH ROW
+EXECUTE FUNCTION public.fn_procesar_dato_dispositivo();
