@@ -1,8 +1,7 @@
-# Ignorar los JSON locales con credenciales (reales o de reemplazo)
-# credenciales y claves
+# Ignorar todos los archivos de credenciales y configuración local
 *.env
 *.json
 
+# (Por si acaso, ignorar específicamente los siguientes)
 Fase 2/Evidencias_Proyecto/Evidencias_de_Sistema/Base de Datos/gentle-complex-473322-d9-b842c9617a14.json
-
 Fase 2/Evidencias_Proyecto/Evidencias_de_Sistema/Base de Datos/credenciales_local.json
