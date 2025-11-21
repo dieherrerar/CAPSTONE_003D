@@ -1,0 +1,128 @@
+/* Centrado y margen para el texto PreguntaInicio */
+.PreguntaInicio {
+  text-align: center;
+  margin-top: 70px;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+  letter-spacing: 0.05em;
+}
+
+.welcome-admin {
+  text-align: center;
+  margin-top: 18px;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+  letter-spacing: 0.02em;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+  padding: 2rem 1rem; /* separación desde el tope de la página */
+  background: linear-gradient(135deg, #9dbb9e 0%, #1d6d1b 100%) !important;
+}
+
+.home-container .Carousel {
+  width: 100%;
+  max-width: 1200px; /* limita el ancho si lo deseas */
+  margin-top: 1rem;
+  position: relative; /* IMPORTANT: evita position: absolute */
+  z-index: 1;
+}
+
+.home-container .Carousel .Carousel-inner {
+  position: relative; /* mantener el flujo del slide */
+}
+
+.temperature-title {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  color: #fff;
+  font-size: 2.5rem;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.7);
+}
+
+.temperature-cards {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-wrap: nowrap;
+  gap: 24px;
+  margin: 30px auto 40px;
+  padding: 0 40px;
+  max-width: 1400px;
+  width: 100%;
+}
+
+.kpi-card-wrapper {
+  flex: 1 1 0;
+  min-width: 0;
+  max-width: none;
+}
+
+.Kpicard {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+  transition: transform 0.25s ease, box-shadow 0.25s ease,
+    border-color 0.25s ease;
+  border: 1px solid rgba(30, 80, 60, 0.18);
+  padding: 0.9rem 1.1rem;
+}
+
+.Kpicard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.22);
+  border-color: #2ecc71;
+}
+
+.Kpicard .h3 {
+  margin: 10px 0;
+  color: #1d6d1b;
+}
+
+.temperature-city-name {
+  font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #184d2b;
+  margin-bottom: 6px;
+  letter-spacing: 0.02em;
+}
+
+.temperature-icon-inline svg {
+  width: 44px;
+  height: 44px;
+}
+
+.temperature-main-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.9rem;
+}
+
+.temperature-condition-label {
+  font-family: "Inter", "Segoe UI", system-ui, -apple-system, sans-serif;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #184d2b;
+}
+
+.temperature-icon-inline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0.75rem;
+}
