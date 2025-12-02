@@ -75,7 +75,7 @@ export async function GET(req: NextRequest) {
     const avgTemp = avgOf("tem_bme280");
     const maxCO2 = maxOf("co2_mhz19");
     const avgCO2 = avgOf("co2_mhz19");
-    const aguaCaida = sumOf("agua_caida");
+    const aguaCaida = avgOf("agua_caida");
 
     const totalConsumo = (() => {
       let sum = 0;
@@ -196,7 +196,15 @@ export async function GET(req: NextRequest) {
       consumo: round2(totalConsumo / timeseries.length),
     }));
 
+    // Obtener título del dashboard (primer registro por ahora)
+    const dashboardInfo = await query(
+      "SELECT titulo_dashboard FROM dashboard ORDER BY id_dashboard ASC LIMIT 1"
+    );
+    const tituloDashboard: string =
+      dashboardInfo.rows?.[0]?.titulo_dashboard || "Dashboard Ambiental";
+
     const payload: DashboardPayload = {
+      titulo_dashboard: tituloDashboard,
       kpis,
       timeseries,
       composition,
